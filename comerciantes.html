@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQWB2W3PD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NQWB2W3PD4');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comerciantes - Brighton Pastelería</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Poppins desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pIVXjEpT52k+bT7u8sQlj8A6V7xo1KaOxGdrpqCF1YvyyqBlGbHShD81F60ydCkLJb7X5yLVrWm9O6bGMhT9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+<meta property="og:title" content="Brighton Pastelería" />
+<meta property="og:description" content="Deliciosos muffins, tartas, cookies y más pastelería artesanal!." />
+<meta property="og:image" content="https://brightonpasteleria.netlify.app/fotos/logo.png" />
+<meta property="og:url" content="https://brightonpasteleria.netlify.app/comerciantes/" />
+<meta property="og:type" content="website" />
+</head>
+<body>
+
+<!-- Navbar Universal -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="logo-link" href="#">
+      <img id="logo" src="" alt="Logo Brighton" style="max-height:60px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+  <ul class="navbar-nav text-end">
+    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+    <li class="nav-item"><a class="nav-link" href="comerciantes.html">Comerciantes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<script>
+  const currentPath = location.pathname;
+
+  // Detectar si estamos en subcarpetas
+  const isSubfolder = currentPath.includes('/productos/'); // agregá más carpetas si hay
+
+  // Logo
+  document.getElementById('logo').src = isSubfolder ? '../fotos/logo.png' : 'fotos/logo.png';
+
+  // Links del menú
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if(href.startsWith('#')) {
+      link.href = (currentPath.endsWith('index.html') || currentPath.endsWith('/')) 
+                  ? href 
+                  : 'index.html' + href;
+    }
+  });
+
+  // Logo siempre apunta al inicio
+  const logoLink = document.getElementById('logo-link');
+  logoLink.href = (currentPath.endsWith('index.html') || currentPath.endsWith('/'))
+                  ? '#hero'
+                  : 'index.html#hero';
+</script>
+
+
+
+
+
+
+  <!-- Hero sección Comerciantes -->
+  <header class="title">
+    <h1>COMERCIANTES</h1>
+    <h2>PRECIOS ESPECIALES POR CANTIDAD</h2>
+    <ph>Mínimo requerido por producto: 3 unidades</ph> <br>
+    <ph>(No aplica a tartas grandes)</ph>
+  </header>
+
+  <!-- Tabla de Comerciantes -->
+<section id="comerciantes">
+  <!--<h2>Comerciantes</h2>
+  <p>Ofrecemos precios especiales por cantidad para cafeterías y comercios. Consultanos por cantidades y condiciones.</p> -->
+  <div class="tabla-container">
+  <table>
+    <!-- TARTAS -->
+    <tr class="categoria">
+      <th colspan="4">TARTAS (Masa sable)</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Lemon Pie chico (10 cm)</td>
+      <td>$7.500</td>
+      <td>$15.000</td>
+      <td>$30.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Dulce de leche y coco chico (10 cm)</td>
+      <td>$7.500</td>
+      <td>$15.000</td>
+      <td>$30.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Lemon Pie grande (22 cm)</td>
+      <td>$30.000</td>
+      <td>$60.000</td>
+      <td>$120.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Dulce de leche y coco grande (22 cm)</td>
+      <td>$48.000</td>
+      <td>$96.000</td>
+      <td>$192.000</td>
+    </tr>
+
+    <!-- LINGOTES -->
+    <tr class="categoria">
+      <th colspan="4">LINGOTES (Mini budines)</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Carrot Cake (con crema de manteca)</td>
+      <td>$7.500</td>
+      <td>$15.000</td>
+      <td>$30.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Manzana</td>
+      <td>$4.500</td>
+      <td>$9.000</td>
+      <td>$18.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Banana con chocolate</td>
+      <td>$6.000</td>
+      <td>$12.000</td>
+      <td>$24.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Banana solo</td>
+      <td>$4.500</td>
+      <td>$9.000</td>
+      <td>$18.000</td>
+    </tr>
+
+    <!-- MUFFINS -->
+    <tr class="categoria">
+      <th colspan="4">MUFFINS</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Café con miel y chips de chocolate, Vainilla y chips, Manzana, Chocolate</td>
+      <td>$3.000</td>
+      <td>$6.000</td>
+      <td>$12.000</td>
+    </tr>
+
+    <!-- GALLETITAS -->
+    <tr class="categoria">
+      <th colspan="4">GALLETITAS (Masa sable)</th>
+      <th>1/2kg</th>
+      <th>1kg</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td colspan="4">Rellenas de mermelada de manzana casera, Rellena de dulce de leche, Rellena de ganache de chocolate</td>
+      <td>$10.000</td>
+      <td>$18.000</td>
+      <td></td>
+    </tr>
+
+    <!-- CUADRADITOS -->
+    <tr class="categoria">
+      <th colspan="4">CUADRADITOS</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Lemonies</td>
+      <td>$6.000</td>
+      <td>$12.000</td>
+      <td>$24.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Brownie</td>
+      <td>$6.000</td>
+      <td>$12.000</td>
+      <td>$24.000</td>
+    </tr>
+    <tr>
+      <td colspan="4">Scon de queso</td>
+      <td>$4.500</td>
+      <td>$9.000</td>
+      <td>$18.000</td>
+    </tr>
+
+    <!-- NEW YORK COOKIES -->
+    <tr class="categoria">
+      <th colspan="4">NEW YORK COOKIES</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Chips de chocolate, doble chocolate, red velvet, carrot cake, limón, crumble de manzana, dulce de leche y coco</td>
+      <td>$5.400</td>
+      <td>$10.800</td>
+      <td>$21.600</td>
+    </tr>
+    <tr class="categoria">
+      <th colspan="4">PANIFICADOS</th>
+      <th>3</th>
+      <th>6</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <td colspan="4">Roll de canela</td>
+      <td>$5.400</td>
+      <td>$10.800</td>
+      <td>$21.600</td>
+    </tr>
+  </table>
+  </div>
+</section>
+
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Escribinos para pedidos o consultas.</p>
+    <a href="https://wa.me/2233049207" target="_blank">WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+<footer style="text-align:center; padding: 20px; background-color: #4B3621; color: #F5EBDD; font-family: Arial, sans-serif;">
+  <p style="margin:0;">&copy; 2025 Brighton Pastelería</p>
+  <div style="margin-top:10px;">
+    <a href="https://www.instagram.com/brightonpasteleria/" target="_blank" rel="noopener noreferrer" style="color:#E1306C; margin: 0 15px; font-size: 24px; text-decoration:none;">
+      <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span>
+    </a>
+    <a href="https://share.google/Sk02CWg5j4B3vHoeJ" target="_blank" rel="noopener noreferrer" style="color:#F5EBDD; margin: 0 15px; font-size: 24px; text-decoration:none;">
+      <i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="sr-only">Google Maps</span>
+    </a>
+  </div>
+</footer>
+
+  
+</body>
+</html>
