@@ -1,13 +1,13 @@
-/* ===== Fuentes locales ===== */
 @font-face {
   font-family: 'Recoleta';
-  src: url('fonts/Recoleta-RegularDEMO.otf') format('opentype');
+  src: url('/fonts/recoleta-regulardemo.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'MyriadPro';
-  src: url('fonts/MYRIADPRO-REGULAR.OTF') format('truetype');
+  src: url('/fonts/myriadpro-regular.otf') format('opentype');
 }
+
 
 /* ===== Paleta de colores ===== */
 :root {
